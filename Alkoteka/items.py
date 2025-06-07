@@ -1,12 +1,29 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 
-class AlkotekaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class ProductItem(scrapy.Item):
+    """Структура товара"""
+
+    # Основные поля
+    timestamp = scrapy.Field()
+    RPC = scrapy.Field()
+    url = scrapy.Field()
+    title = scrapy.Field()
+    marketing_tags = scrapy.Field()
+    brand = scrapy.Field()
+    section = scrapy.Field()
+
+    # Ценовые данные
+    price_data = scrapy.Field()
+
+    # Наличие товара
+    stock = scrapy.Field()
+
+    # Медиа-контент
+    assets = scrapy.Field()
+
+    # Метаданные и характеристики
+    metadata = scrapy.Field()
+
+    # Варианты товара
+    variants = scrapy.Field()
